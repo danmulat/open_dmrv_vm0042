@@ -1,0 +1,19 @@
+project:
+  name: Open dMRV MFL synthetic Ethiopia validation
+  country: Ethiopia
+  start_year: 2026
+  end_year: 2030
+  soc_depth_cm: 30
+  confidence_level_percent: 90
+  precision_target_percent: 10
+  status: SYNTHETIC_TEST
+
+constants:
+  carbon_to_co2: 3.6666666666666665
+  gwp_ch4: 27.2
+  gwp_n2o: 273.0
+  methane_energy_mj_per_kg: 55.65
+  methane_density_kg_per_m3: 0.67
+
+uncertainty:
+  illustrative_threshold_percent: 15.0

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite this software using these metadata."
+title: "Open dMRV for VM0042 Measure and Model"
+type: software
+authors:
+  - family-names: "Mulat"
+    given-names: "Daniel"
+    email: "danielg.mulat@gmail.com"
+version: 0.1.0
+date-released: 2026-07-26
+license: MIT
+repository-code: "https://github.com/danmulat/open_dmrv_vm0042"
+keywords:
+  - digital MRV
+  - VM0042
+  - soil organic carbon
+  - RothC
+  - livestock methane
+  - Ethiopia

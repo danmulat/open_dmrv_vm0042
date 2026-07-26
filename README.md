@@ -6,8 +6,6 @@ The model follows the structure of Verra VM0042 Quantification Approach 1, Measu
 
 > **Research status:** This repository is not validated for carbon credit issuance. The RothC implementation, artificial intelligence components, remote sensing models, sampling plan and uncertainty deductions require independent review under the active Verra methodology and model guidance before use in a registered project.
 
-![Modular platform](assets/modular_platform.png)
-
 ## Main modules
 
 1. Soil organic carbon stock calculation from concentration, bulk density, depth and coarse fragments.
@@ -63,21 +61,14 @@ The synthetic SOC stocks are generated from depth specific SOC concentration, bu
 ```text
 src/open_dmrv/       Python package
 src/open_dmrv/models Accounting and process modules
-data/synthetic/      Reproducible synthetic datasets
 examples/            Example scripts
 tests/               Unit and integration tests
 docs/                Method and governance notes
-workbook/             Excel implementation
-assets/               Figures and previews
 ```
 
 ## Workbook
 
-The validated synthetic workbook is included at:
-
-`workbook/Open_dMRV_VM0042_Synthetic_Ethiopia_Validated.xlsx`
-
-![Dashboard preview](assets/dashboard_preview.png)
+The validated synthetic workbook is distributed separately from the source repository. The Python package reproduces the synthetic test workflow.
 
 ## Citation
 
