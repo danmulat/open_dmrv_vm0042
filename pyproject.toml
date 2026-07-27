@@ -4,11 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "open-dmrv"
-version = "0.1.0"
+version = "0.2.0"
 description = "Research implementation of an open digital MRV model aligned with VM0042 Quantification Approach 1"
 readme = "README.md"
 requires-python = ">=3.11"
-license = {text = "MIT"}
+license = {text = "MIT with an Apache 2.0 licensed RothC derived module"}
 authors = [{name = "Daniel Mulat", email = "danielg.mulat@gmail.com"}]
 keywords = ["MRV", "VM0042", "soil organic carbon", "RothC", "livestock methane", "Ethiopia"]
 dependencies = ["numpy>=1.26", "pandas>=2.1", "pydantic>=2.6", "PyYAML>=6.0", "typer>=0.12", "openpyxl>=3.1", "matplotlib>=3.8"]
@@ -23,6 +23,7 @@ open-dmrv = "open_dmrv.cli:app"
 [project.urls]
 Documentation = "https://github.com/danmulat/open_dmrv_vm0042"
 Source = "https://github.com/danmulat/open_dmrv_vm0042"
+RothC = "https://github.com/Rothamsted-Models/RothC_Py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/open_dmrv"]
