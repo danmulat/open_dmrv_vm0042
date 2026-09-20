@@ -13,7 +13,7 @@ class ProjectConfig(BaseModel):
     country: str = "Ethiopia"
     start_year: int = 2026
     end_year: int = 2030
-    soc_depth_cm: float = 30.0
+    soc_depth_cm: float = Field(default=30.0, ge=30.0)
     confidence_level_percent: float = 90.0
     precision_target_percent: float = 10.0
     status: str = "RESEARCH"
@@ -27,6 +27,18 @@ class Constants(BaseModel):
     methane_density_kg_per_m3: float = 0.67
 
 
+class MethodologyConfig(BaseModel):
+    vm0042_version: str = "2.2"
+    vmd0053_version: str = "2.1"
+    vt0014_version: str = "1.0"
+    gleam_repository: str = "un-fao/GLEAM"
+    gleam_commit: str = "90e416197e89093c4f3a347b263ba805d33d4aac"
+    digital_soc_reference_repository: str = (
+        "Ecosystem-Services-GeoAI/florida-grazing-soc-qrf"
+    )
+    digital_soc_reference_commit: str = "48c3794256d88e87e3cc83bb66694a5f11bbbce0"
+
+
 class UncertaintyConfig(BaseModel):
     illustrative_threshold_percent: float = Field(default=15.0, ge=0.0)
 
@@ -34,6 +46,7 @@ class UncertaintyConfig(BaseModel):
 class ModelConfig(BaseModel):
     project: ProjectConfig
     constants: Constants = Constants()
+    methodology: MethodologyConfig = MethodologyConfig()
     uncertainty: UncertaintyConfig = UncertaintyConfig()
 
     @classmethod
