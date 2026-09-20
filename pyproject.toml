@@ -4,18 +4,31 @@ build-backend = "hatchling.build"
 
 [project]
 name = "open-dmrv"
-version = "0.1.0"
-description = "Research implementation of an open digital MRV model aligned with VM0042 Quantification Approach 1"
+version = "0.2.0"
+description = "Research implementation of an open whole farm digital MRV model aligned with VM0042"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [{name = "Daniel Mulat", email = "danielg.mulat@gmail.com"}]
-keywords = ["MRV", "VM0042", "soil organic carbon", "RothC", "livestock methane", "Ethiopia"]
-dependencies = ["numpy>=1.26", "pandas>=2.1", "pydantic>=2.6", "PyYAML>=6.0", "typer>=0.12", "openpyxl>=3.1", "matplotlib>=3.8"]
+keywords = ["MRV", "VM0042", "soil organic carbon", "RothC", "GLEAM", "whole farm", "Ethiopia", "Kenya"]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "pydantic>=2.6",
+  "PyYAML>=6.0",
+  "typer>=0.12",
+  "openpyxl>=3.1",
+  "matplotlib>=3.8",
+  "scipy>=1.12",
+  "scikit-learn>=1.5",
+  "statsmodels>=0.14",
+  "quantile-forest==1.4.1",
+]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "pytest-cov>=5.0", "ruff>=0.5", "mypy>=1.10"]
 app = ["streamlit>=1.36"]
+geo = ["rasterio>=1.4", "geopandas>=1.0", "shap>=0.48"]
 
 [project.scripts]
 open-dmrv = "open_dmrv.cli:app"
